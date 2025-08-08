@@ -1,0 +1,9 @@
+name: Build & Deploy to Test
+on:
+  push:
+    branches: [ 'main' ]
+
+jobs:
+  deploy-to-test:
+    uses: iu-apps/github-workflows/.github/workflows/test-deploy.yml@main
+    secrets: inherit

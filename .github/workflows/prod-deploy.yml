@@ -1,0 +1,9 @@
+name: Build & Deploy to Production
+on:
+  push:
+    tags: ['*']
+
+jobs:
+  deploy-to-prod:
+    uses: iu-apps/github-workflows/.github/workflows/prod-deploy.yml@main
+    secrets: inherit
